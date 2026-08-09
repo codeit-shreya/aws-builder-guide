@@ -8,17 +8,19 @@ export default function CommunityCTA() {
         <div className="rounded-3xl border border-(--color-teal)/25 bg-(--color-teal)/[0.05] p-8 sm:p-10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
           <div>
             <h2 className="font-display text-xl sm:text-2xl font-semibold text-(--color-paper) mb-2">
-              Want to learn more?
+              Join the AWS Student Community
             </h2>
             <p className="text-sm sm:text-[15px] text-(--color-mist) leading-relaxed max-w-md">
-              Join our student AWS community to get updates about discussions, learning resources, events and opportunities.
+              Fill out the registration form after creating your Builder ID — it takes under a minute and connects you with the student community.
             </p>
           </div>
           <a
-            href={siteConfig.communityLink}
+            href={siteConfig.registrationFormUrl}
+            target="_blank"
+            rel="noopener noreferrer"
             className="focus-ring shrink-0 font-display font-medium text-sm border border-(--color-teal)/50 text-(--color-teal) px-6 py-3 rounded-full hover:bg-(--color-teal)/10 transition-colors whitespace-nowrap"
           >
-            Join the community
+            Register for the Community →
           </a>
         </div>
       </Reveal>

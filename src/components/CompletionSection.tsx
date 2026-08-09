@@ -1,3 +1,4 @@
+import { siteConfig } from '../data/config'
 import { dashboardStep, profileStep } from '../data/steps'
 import Reveal from './Reveal'
 import ScreenshotViewer from './ScreenshotViewer'
@@ -45,6 +46,40 @@ export default function CompletionSection() {
           <p className="text-sm text-(--color-paper)/90 leading-relaxed">
             Save your Builder ID details somewhere safe so you can easily access your profile later.
           </p>
+        </div>
+      </Reveal>
+
+      {/* ── Next step: submit registration form ─────────────────────────────── */}
+      <Reveal delay={220}>
+        <div className="mt-8 rounded-2xl border border-(--color-green)/30 bg-(--color-green)/[0.05] p-6 sm:p-8">
+          <p className="font-mono text-[11px] tracking-wider uppercase text-(--color-green) mb-2">
+            Next step
+          </p>
+          <h3 className="font-display text-xl sm:text-2xl font-semibold text-(--color-paper) mb-2">
+            Builder ID created? 🎉
+          </h3>
+          <p className="text-sm sm:text-[15px] text-(--color-mist) leading-relaxed max-w-xl mb-6">
+            Great! Now submit your details so we can verify your registration and connect you with the student AWS community.
+            You'll need your <strong className="text-(--color-paper)/80">Builder Alias</strong>, semester and department.
+          </p>
+          <div className="flex flex-wrap gap-3">
+            <a
+              href={siteConfig.registrationFormUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="focus-ring font-display font-medium text-sm sm:text-[15px] bg-(--color-amber) text-(--color-ink) px-6 py-3 rounded-full hover:bg-[#ffab24] transition-colors"
+            >
+              Complete Registration Form →
+            </a>
+            <a
+              href={siteConfig.builderCenterUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="focus-ring font-display font-medium text-sm sm:text-[15px] border border-(--color-line) text-(--color-mist) px-5 py-3 rounded-full hover:border-(--color-mist) transition-colors"
+            >
+              Need to create your Builder ID first? →
+            </a>
+          </div>
         </div>
       </Reveal>
     </section>

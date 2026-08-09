@@ -7,4 +7,8 @@ export const siteConfig = {
   communityLink: '#', // placeholder — replace with the real community invite link
   builderCenterLink: 'https://builder.aws.com',
   awsDocsLink: 'https://docs.aws.amazon.com',
+  // ── Action links ──────────────────────────────────────────────────────────
+  // Update these two URLs here and they will propagate everywhere on the site.
+  builderCenterUrl: 'https://bit.ly/4cbkq4C',           // Step 1 — create Builder ID
+  registrationFormUrl: 'https://forms.gle/rxiQPjRM5E5N5Eoz5', // Step 2 — submit details
 }

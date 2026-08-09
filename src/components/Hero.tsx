@@ -1,3 +1,4 @@
+import { siteConfig } from '../data/config'
 import PixelMotif from './PixelMotif'
 
 const badges = ['Beginner friendly', 'Step-by-step', 'Free Builder ID']
@@ -30,6 +31,14 @@ export default function Hero() {
                 Start the guide
               </a>
               <a
+                href={siteConfig.builderCenterUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="focus-ring font-display font-medium text-sm sm:text-[15px] border border-(--color-teal)/50 text-(--color-teal) px-6 py-3 rounded-full hover:bg-(--color-teal)/10 transition-colors"
+              >
+                Create Your Builder ID →
+              </a>
+              <a
                 href="#what-is-it"
                 className="focus-ring font-display font-medium text-sm sm:text-[15px] border border-(--color-line) text-(--color-paper) px-6 py-3 rounded-full hover:border-(--color-mist) transition-colors"
               >
@@ -42,6 +51,22 @@ export default function Hero() {
                   <span className="text-(--color-green)">✓</span> {b}
                 </span>
               ))}
+            </div>
+
+            {/* Already have a Builder ID? — second path for returning students */}
+            <div className="mt-6 rounded-xl border border-(--color-teal)/25 bg-(--color-teal)/[0.05] px-4 py-3.5 flex flex-col sm:flex-row sm:items-center gap-3">
+              <p className="text-sm text-(--color-mist) leading-snug flex-1">
+                <span className="font-medium text-(--color-paper)/90">Already have your AWS Builder ID?</span>{' '}
+                Submit your Builder Alias, semester and department to complete your registration.
+              </p>
+              <a
+                href={siteConfig.registrationFormUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="focus-ring shrink-0 font-display font-medium text-xs border border-(--color-teal)/50 text-(--color-teal) px-4 py-2 rounded-full hover:bg-(--color-teal)/10 transition-colors whitespace-nowrap"
+              >
+                Complete Registration Form →
+              </a>
             </div>
           </div>
 

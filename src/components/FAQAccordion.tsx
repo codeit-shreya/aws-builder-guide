@@ -1,10 +1,11 @@
 import { useState } from 'react'
+import { siteConfig } from '../data/config'
 import Reveal from './Reveal'
 
 interface FAQItem {
   q: string
   a: string | string[]
-  cta?: { label: string; href: string }
+  cta?: { label: string; href: string; external?: boolean }
 }
 
 const faqs: FAQItem[] = [
@@ -18,6 +19,7 @@ const faqs: FAQItem[] = [
   {
     q: 'Is the AWS Builder ID free?',
     a: 'Yes. Creating an AWS Builder ID is free.',
+    cta: { label: 'Start Builder ID Registration', href: siteConfig.builderCenterUrl, external: true },
   },
   {
     q: 'What is AWS Builder Center, really?',
@@ -30,6 +32,12 @@ const faqs: FAQItem[] = [
   {
     q: 'Do I need to know AWS already?',
     a: 'No. This guide is designed for students who are just getting started.',
+    cta: { label: 'Start Builder ID Registration →', href: siteConfig.builderCenterUrl, external: true },
+  },
+  {
+    q: 'Already have your Builder ID?',
+    a: 'Great! Submit your Builder Alias, semester and department through the registration form so we can verify your registration and add you to the student AWS community.',
+    cta: { label: 'Open Registration Form →', href: siteConfig.registrationFormUrl, external: true },
   },
   {
     q: 'I\'m stuck during signup. What should I do?',
@@ -37,6 +45,7 @@ const faqs: FAQItem[] = [
     cta: { label: 'Get help', href: '#help' },
   },
 ]
+
 
 function AccordionItem({ item, index }: { item: FAQItem; index: number }) {
   const [open, setOpen] = useState(false)
@@ -84,6 +93,9 @@ function AccordionItem({ item, index }: { item: FAQItem; index: number }) {
             {item.cta && (
               <a
                 href={item.cta.href}
+                {...(item.cta.external
+                  ? { target: '_blank', rel: 'noopener noreferrer' }
+                  : {})}
                 className="focus-ring inline-flex items-center gap-1.5 text-sm font-medium text-(--color-amber) hover:text-[#ffab24] mt-1"
               >
                 {item.cta.label} →
