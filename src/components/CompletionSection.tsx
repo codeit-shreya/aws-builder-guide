@@ -80,8 +80,24 @@ export default function CompletionSection() {
               Need to create your Builder ID first? →
             </a>
           </div>
+
+          {/* ── Step 3: Join WhatsApp community ─────────────────────────────── */}
+          <div className="mt-6 pt-5 border-t border-(--color-line)">
+            <p className="text-sm text-(--color-mist) mb-3">
+              Already submitted the form? Join the SMIT AWS community discussion group to stay connected.
+            </p>
+            <a
+              href={siteConfig.whatsappCommunityUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="focus-ring inline-flex items-center font-display font-medium text-sm border border-(--color-teal)/50 text-(--color-teal) px-5 py-2.5 rounded-full hover:bg-(--color-teal)/10 transition-colors"
+            >
+              Join WhatsApp Community →
+            </a>
+          </div>
         </div>
       </Reveal>
+
     </section>
   )
 }

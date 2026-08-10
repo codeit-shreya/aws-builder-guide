@@ -11,16 +11,16 @@ export default function CommunityCTA() {
               Join the AWS Student Community
             </h2>
             <p className="text-sm sm:text-[15px] text-(--color-mist) leading-relaxed max-w-md">
-              Fill out the registration form after creating your Builder ID — it takes under a minute and connects you with the student community.
+              Join the SMIT AWS community discussion group for AWS updates, discussions, learning resources and upcoming activities.
             </p>
           </div>
           <a
-            href={siteConfig.registrationFormUrl}
+            href={siteConfig.whatsappCommunityUrl}
             target="_blank"
             rel="noopener noreferrer"
             className="focus-ring shrink-0 font-display font-medium text-sm border border-(--color-teal)/50 text-(--color-teal) px-6 py-3 rounded-full hover:bg-(--color-teal)/10 transition-colors whitespace-nowrap"
           >
-            Register for the Community →
+            Join WhatsApp Community →
           </a>
         </div>
       </Reveal>

@@ -40,6 +40,11 @@ const faqs: FAQItem[] = [
     cta: { label: 'Open Registration Form →', href: siteConfig.registrationFormUrl, external: true },
   },
   {
+    q: 'How do I join the WhatsApp community?',
+    a: 'After submitting the registration form, join the SMIT AWS community discussion group to stay connected with AWS updates, discussions and upcoming activities.',
+    cta: { label: 'Join WhatsApp Community →', href: siteConfig.whatsappCommunityUrl, external: true },
+  },
+  {
     q: 'I\'m stuck during signup. What should I do?',
     a: 'Don\'t worry. Take a screenshot of the step where you\'re stuck and contact me for help.',
     cta: { label: 'Get help', href: '#help' },
